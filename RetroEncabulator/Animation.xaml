@@ -85,10 +85,10 @@
                     <Storyboard>
                         <DoubleAnimation Storyboard.TargetName="CB1_Transl" Storyboard.TargetProperty="X" From="-1920" To="-10" Duration="0:0:5" />
                         <DoubleAnimation Storyboard.TargetName="CB2_Transl" Storyboard.TargetProperty="X" From="-1920" To="-10" Duration="0:0:5" />
-                        <DoubleAnimation Storyboard.TargetName="EncabulatorReal" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:5" Duration="0:0:0.3" />
-                        <DoubleAnimation Storyboard.TargetName="EncabulatorShadow" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:5" Duration="0:0:0.3" />
-                        <DoubleAnimation Storyboard.TargetName="EncabulatorReal" Storyboard.TargetProperty="Opacity" From="1" To="0.8" BeginTime="0:0:5.3" Duration="0:0:0.3" />
-                        <DoubleAnimation Storyboard.TargetName="EncabulatorShadow" Storyboard.TargetProperty="Opacity" From="1" To="0.3" BeginTime="0:0:5.3" Duration="0:0:0.3" />
+                        <DoubleAnimation Storyboard.TargetName="EncabulatorReal" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:4.8" Duration="0:0:0.3" />
+                        <DoubleAnimation Storyboard.TargetName="EncabulatorShadow" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:4.8" Duration="0:0:0.3" />
+                        <DoubleAnimation Storyboard.TargetName="EncabulatorReal" Storyboard.TargetProperty="Opacity" From="1" To="0.8" BeginTime="0:0:6.2" Duration="0:0:0.8" />
+                        <DoubleAnimation Storyboard.TargetName="EncabulatorShadow" Storyboard.TargetProperty="Opacity" From="1" To="0.3" BeginTime="0:0:6.2" Duration="0:0:0.8" />
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger>
