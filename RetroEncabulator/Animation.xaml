@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RetroEncabulator"
         mc:Ignorable="d"
-        Title="RetroAnimation" Height="1080" Width="1920" WindowStartupLocation="CenterOwner" WindowState="Maximized" Topmost="True" WindowStyle="None" Background="#FFF9E9CD">
+        x:Name="Window"
+        Title="RetroAnimation" Height="1080" Width="1920" WindowStartupLocation="CenterOwner" WindowState="Maximized" Topmost="True" WindowStyle="None" Background="Black" AllowsTransparency="true">
     <Canvas x:Name="Background" Margin="0">
         <Canvas.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -18,77 +19,79 @@
                 <BlurEffect Radius="55"/>
             </Label.Effect>
         </Label>
-        <Rectangle x:Name="CB1" Fill="#FFF7DA59" Height="60" Canvas.Left="-80" Canvas.Top="164" Width="2108" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
+        <Canvas x:Name="Rainbow" Height="296" Opacity="1" Canvas.Left="-500" Canvas.Top="167" Width="3000" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
+                    <ScaleTransform x:Name="RainbowScale" ScaleY="1"/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-5.235"/>
-                    <TranslateTransform x:Name="CB1_Transl" X="-10.767" Y="0.492"/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle x:Name="CB2" Fill="#FFEE8446" Height="60" Canvas.Left="-80" Canvas.Top="223" Width="2108" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-5.235"/>
-                    <TranslateTransform x:Name="CB2_Transl" X="-5.383" Y="0.246"/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle x:Name="CB3" Fill="#FFDB333B" Height="60" Canvas.Left="-80" Canvas.Top="282" Width="2108" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-5.235"/>
+                    <RotateTransform x:Name="RainbowRotate" Angle="0" />
                     <TranslateTransform/>
                 </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle x:Name="CB4" Fill="#FFAC385D" Height="60" Canvas.Left="-80" Canvas.Top="341" Width="2108" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-5.235"/>
-                    <TranslateTransform X="5.383" Y="-0.246"/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle x:Name="CB5" Fill="#FF6D3453" Height="60" Canvas.Left="-80" Canvas.Top="400" Width="2108" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-5.235"/>
-                    <TranslateTransform X="10.767" Y="-0.492"/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Label x:Name="Retro" Content="Retro" Canvas.Left="748" Canvas.Top="162" Foreground="White" FontSize="200" RenderTransformOrigin="0.5,0.5" FontFamily="/RetroEncabulator;component/Resources/#No. Seven Regular" HorizontalAlignment="Center">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-5.45"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+            </Canvas.RenderTransform>
+            <Rectangle x:Name="CB1" Fill="#FFF7DA59" Height="60" Width="3000" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="CB2" Fill="#FFEE8446" Height="60" Canvas.Top="59" Width="3000" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="CB3" Fill="#FFDB333B" Height="60" Canvas.Top="118" Width="3000" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="CB4" Fill="#FFAC385D" Height="60" Canvas.Top="177" Width="3000" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="CB5" Fill="#FF6D3453" Height="60" Canvas.Top="236" Width="3000" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label x:Name="Retro" Content="Retro" Opacity="0" Canvas.Left="1195" Canvas.Top="-49" Foreground="White" FontSize="250" RenderTransformOrigin="0.5,0.5" FontFamily="/RetroEncabulator;component/Resources/#No. Seven Regular" HorizontalAlignment="Center" Width="602">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1.2"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </Canvas>
         <Label x:Name="EncabulatorReal" Opacity="0" Content="Encabulator" Canvas.Left="388" Canvas.Top="586" Foreground="#FFFBFBFB" FontSize="200" RenderTransformOrigin="0.5,0.5" FontFamily="/RetroEncabulator;component/Resources/#Russo One"/>
         <Canvas.Triggers>
             <EventTrigger RoutedEvent="Loaded">
                 <BeginStoryboard>
                     <Storyboard>
-                        <DoubleAnimation Storyboard.TargetName="CB1_Transl" Storyboard.TargetProperty="X" From="-1920" To="-10" Duration="0:0:5" />
-                        <DoubleAnimation Storyboard.TargetName="CB2_Transl" Storyboard.TargetProperty="X" From="-1920" To="-10" Duration="0:0:5" />
+                        <DoubleAnimation Storyboard.TargetName="Rainbow" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:0" Duration="0:0:4.8" />
+                        <DoubleAnimation Storyboard.TargetName="RainbowScale" Storyboard.TargetProperty="ScaleY" From="10" To="1" BeginTime="0:0:0" Duration="0:0:4.8" />
+                        <DoubleAnimation Storyboard.TargetName="RainbowRotate" Storyboard.TargetProperty="Angle" From="90" To="0" BeginTime="0:0:0" Duration="0:0:4.8" />
+                        <DoubleAnimation Storyboard.TargetName="Retro" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:4.8" Duration="0:0:0" />
                         <DoubleAnimation Storyboard.TargetName="EncabulatorReal" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:4.8" Duration="0:0:0.3" />
                         <DoubleAnimation Storyboard.TargetName="EncabulatorShadow" Storyboard.TargetProperty="Opacity" From="0" To="1" BeginTime="0:0:4.8" Duration="0:0:0.3" />
-                        <DoubleAnimation Storyboard.TargetName="EncabulatorReal" Storyboard.TargetProperty="Opacity" From="1" To="0.8" BeginTime="0:0:6.2" Duration="0:0:0.8" />
-                        <DoubleAnimation Storyboard.TargetName="EncabulatorShadow" Storyboard.TargetProperty="Opacity" From="1" To="0.3" BeginTime="0:0:6.2" Duration="0:0:0.8" />
+                        <DoubleAnimation Storyboard.TargetName="Window" Storyboard.TargetProperty="Opacity" From="1" To="0" BeginTime="0:0:6.5" Duration="0:0:1" />
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger>
